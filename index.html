@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Valentine Surprise</title>
+
+<style>
+
+body{
+margin:0;
+overflow:hidden;
+font-family:Arial;
+text-align:center;
+background:linear-gradient(135deg,#ff758c,#ff7eb3);
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+color:white;
+}
+
+h1{
+font-size:40px;
+}
+
+img{
+width:220px;
+margin:20px;
+}
+
+button{
+padding:12px 25px;
+font-size:18px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+margin:10px;
+}
+
+#yes{
+background:#00ff95;
+}
+
+#no{
+background:#ff4d4d;
+position:absolute;
+}
+
+#exit{
+position:absolute;
+top:20px;
+right:20px;
+background:black;
+color:white;
+}
+
+#nameBox{
+padding:10px;
+font-size:18px;
+border-radius:8px;
+border:none;
+}
+
+.heart{
+position:absolute;
+color:red;
+font-size:24px;
+animation:fall 5s linear infinite;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-10vh);
+opacity:1;
+}
+100%{
+transform:translateY(110vh);
+opacity:0;
+}
+}
+
+</style>
+</head>
+
+
+<body>
+
+<button id="exit">Exit ❌</button>
+
+<h1 id="title">Enter your name first 😏</h1>
+
+<input id="nameBox" placeholder="Enter name">
+<br>
+<button onclick="start()">Start ❤️</button>
+
+<img id="gif" src="https://media.giphy.com/media/9Y5BbDSkSTiY8/giphy.gif">
+
+<div id="buttons" style="display:none;">
+<button id="yes" onclick="yesClick()">Yes ❤️</button>
+<button id="no">No 😢</button>
+</div>
+
+<p id="result"></p>
+
+<audio autoplay loop>
+<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
+</audio>
+
+<script>
+
+function start(){
+
+let name=document.getElementById("nameBox").value;
+
+if(name===""){
+alert("Enter name first 😄");
+return;
+}
+
+document.getElementById("title").innerHTML=
+name + ", Will You Be My Valentine? ❤️";
+
+document.getElementById("buttons").style.display="block";
+
+}
+
+function yesClick(){
+
+document.getElementById("result").innerHTML="I knew it 😍❤️";
+
+document.getElementById("gif").src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif";
+
+}
+
+// NO BUTTON RUN AWAY
+
+let noBtn=document.getElementById("no");
+
+document.addEventListener("mousemove",function(e){
+
+let rect=noBtn.getBoundingClientRect();
+
+let distX=Math.abs(e.clientX-rect.left);
+let distY=Math.abs(e.clientY-rect.top);
+
+if(distX<100 && distY<100){
+
+let x=Math.random()*window.innerWidth;
+let y=Math.random()*window.innerHeight;
+
+noBtn.style.left=x+"px";
+noBtn.style.top=y+"px";
+
+}
+
+});
+
+
+// EXIT BUTTON PRANK
+
+let exitBtn=document.getElementById("exit");
+
+exitBtn.addEventListener("mouseover",function(){
+
+let x=Math.random()*window.innerWidth;
+let y=Math.random()*window.innerHeight;
+
+exitBtn.style.left=x+"px";
+exitBtn.style.top=y+"px";
+
+document.getElementById("result").innerHTML="Itna jaldi bhaag rahe ho? 😆";
+
+});
+
+
+// HEART RAIN
+
+function createHeart(){
+
+let heart=document.createElement("div");
+
+heart.classList.add("heart");
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{heart.remove()},5000);
+
+}
+
+setInterval(createHeart,300);
+
+</script>
+
+</body>
+</html>
