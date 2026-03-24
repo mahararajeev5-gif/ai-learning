@@ -75,6 +75,6 @@ ai-learning/
 
 ---
 
-🔥 Made by Rakuu Bhai
+🔥 Made by rakuu
 
 
