@@ -1,5 +1,7 @@
 # ai-learning
+
 This repository contains my Python and AI practice projects.
+
 # 🤖 AI Learning & Hand Gesture Project
 
 Welcome to my AI learning journey 🚀
@@ -15,25 +17,25 @@ An AI-based system that detects hand gestures and responds with Hindi voice.
 
 ### 🚀 Features
 
-* Real-time hand tracking using webcam
-* Finger detection using MediaPipe
-* Hindi voice output (Text-to-Speech)
-* Multiple gesture support
+- Real-time hand tracking using webcam
+- Finger detection using MediaPipe
+- Hindi voice output (Text-to-Speech)
+- Multiple gesture support
 
 ### 🖐️ Gestures
 
-* 1 Finger → Ram Ram 🙏
-* 2 Fingers → Hello 👋
-* 3 Fingers → Love You ❤️
+- 1 Finger → Ram Ram 🙏
+- 2 Fingers → Hello 👋
+- 3 Fingers → Love You ❤️
 
 ---
 
 ## 🛠️ Tech Stack
 
-* Python
-* OpenCV
-* MediaPipe
-* gTTS / pyttsx3
+- Python
+- OpenCV
+- MediaPipe
+- gTTS / pyttsx3
 
 ---
 
@@ -60,21 +62,15 @@ ai-learning/
 
 ## 💡 Learning Goals
 
-* Computer Vision
-* Deep Learning
-* AI Projects
-* Real-world applications
+- Computer Vision
+- Deep Learning
+- AI Projects
+- Real-world applications
 
 ---
 
 ## 🚀 Future Plans
 
-* Hand gesture game control 🎮
-* AI virtual assistant 🤖
-* More computer vision projects 📸
-
----
-
-🔥 Made by rakuu
-
-
+- Hand gesture game control 🎮
+- AI virtual assistant 🤖
+- More computer vision projects 📸
